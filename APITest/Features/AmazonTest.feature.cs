@@ -35,7 +35,7 @@ namespace AutomationTest.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "AmazonTest", "A short summary of the feature", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "AmazonTest", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -73,6 +73,15 @@ namespace AutomationTest.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 3
+#line hidden
+#line 4
+testRunner.Given("User Navigate to amazon.in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Validate search bar functionality is working for multiple products")]
         [NUnit.Framework.TestCaseAttribute("Toy", null)]
@@ -83,7 +92,7 @@ namespace AutomationTest.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Item", item);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate search bar functionality is working for multiple products", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 5
+#line 6
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -103,8 +112,8 @@ namespace AutomationTest.Features
             else
             {
                 this.ScenarioStart();
-#line 6
- testRunner.Given("User Navigate to amazon.in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 3
+this.FeatureBackground();
 #line hidden
 #line 7
     testRunner.When("User Amazon Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -146,20 +155,20 @@ namespace AutomationTest.Features
             else
             {
                 this.ScenarioStart();
-#line 16
- testRunner.Given("User Navigate to amazon.in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 3
+this.FeatureBackground();
 #line hidden
-#line 17
+#line 16
  testRunner.When("Select the Hamburger Menu button from the main navigation bar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 18
- testRunner.And("User select option \'Mobiles, Computers\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+ testRunner.And("User select option Mobiles, Computers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 19
+#line 18
  testRunner.And("Select option \'Software", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 20
- testRunner.Then("User validate the log is present under \'Top categories\' section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 19
+ testRunner.Then("User validate the log is present under Top categories section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -172,7 +181,7 @@ namespace AutomationTest.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate item is added to the cart", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 22
+#line 21
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -192,22 +201,22 @@ namespace AutomationTest.Features
             else
             {
                 this.ScenarioStart();
-#line 23
- testRunner.Given("User Navigate to amazon.in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 3
+this.FeatureBackground();
 #line hidden
-#line 24
+#line 22
     testRunner.When("User Amazon Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 25
- testRunner.And("user search the product \'Toy\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 23
+ testRunner.And("user search the product Toy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 26
+#line 24
  testRunner.And("User select the first produc", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 27
+#line 25
  testRunner.And("User Click on Add Cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 28
+#line 26
  testRunner.Then("select shopping cart and validate if added item is present in the shopping cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

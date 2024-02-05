@@ -49,8 +49,8 @@ namespace AutomationTest.StepDefinitions
             amazonHomePage?.CLickOnHamburger();
         }
 
-        [When(@"User select option '([^']*)'")]
-        public void WhenUserSelectOption(string p0)
+        [When(@"User select option Mobiles, Computers")]
+        public void WhenUserSelectOptionMobilesComputers()
         {
             amazonHomePage?.ClickMobilesComputers();
         }
@@ -61,14 +61,14 @@ namespace AutomationTest.StepDefinitions
             CurrentPage = amazonHomePage?.ClickSoftware();
         }
 
-        [Then(@"User validate the log is present under '([^']*)' section")]
-        public void ThenUserValidateTheLogIsPresentUnderSection(string p0)
+        [Then(@"User validate the log is present under Top categories section")]
+        public void ThenUserValidateTheLogIsPresentUnderTopCategoriesSection()
         {
             CurrentPage?.As<SoftwareStorePage>().VerifyTopCategories();
         }
 
-        [When(@"user search the product '([^']*)'")]
-        public void WhenUserSearchTheProduct(string product)
+        [When(@"user search the product Toy")]
+        public void WhenUserSearchTheProductToy()
         {
             CurrentPage = amazonHomePage?.GetToyPage();
         }

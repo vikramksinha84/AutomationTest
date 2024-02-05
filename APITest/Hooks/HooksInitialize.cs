@@ -19,32 +19,28 @@ namespace AutomationTest.Hooks
         [BeforeTestRun]
         public static void TestRun()
         {
-            //to do
+            //Initialize the global data like url ,time ets
         }
 
-        [BeforeFeature]
-        public static void BeforeFeature(FeatureContext featureContext)
-        {
-            //to do
-        }
+
 
         [BeforeScenario]
         public void TestInitalize()
         {
-            //Browser initialize
+            //method launch browser
         }
 
         [AfterScenario]
         public void AfterScenario()
         {
-            //Browser close
+            //Method to close the browser
         }
 
 
         [AfterTestRun]
         public static void TearDownReport()
         {
-            //to do
+            //Clean up 
         }
     }
 }
